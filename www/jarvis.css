@@ -1,0 +1,122 @@
+body{
+    background-color: black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    color: white;
+}
+.square{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:radial-gradient(#6b72ff00 50%,#000dff3b 40%) ;
+    box-shadow: 0 0 50px rgb(25, 0 ,255), inset 0 0 50px rgb(25, 0 ,255);
+    border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animate1 6s linear infinite;
+}
+.square span:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:radial-gradient(#6b72ff00 50%,#000dff3b 40%) ;
+    box-shadow: 0 0 50px rgb(25, 0 ,255), inset 0 0 50px rgb(25, 0 ,255);
+    border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animate2 4s linear infinite;
+}
+.square span:nth-child(3){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:radial-gradient(#6b72ff00 50%,#000dff3b 40%) ;
+    box-shadow: 0 0 50px rgb(10, 0, 105), inset 0 0 50px rgb(17, 0, 174);
+    border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animate3 8s linear infinite;
+}
+
+@keyframes animate1{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);  
+    }
+}
+@keyframes animate2{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+@keyframes animate3{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.typewriter-fade-effect {
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    white-space: nowrap; /* Ensures the text stays in one line */
+    overflow: hidden; /* Hides the text until it is typed */
+    border-right: 3px solid black; /* Simulates the blinking cursor */
+    animation: typing 1.5s , blink 0.75s step-end infinite, fadeOutEffect 4s ease-out infinite;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Typewriter effect - typing the text */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: black;
+    }
+}
+
+/* Fade-out effect */
+@keyframes fadeOutEffect {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
